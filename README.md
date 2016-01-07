@@ -17,9 +17,12 @@ Hardware: Xbox Kinect V2, 2 projectors, web cam, 2 computers, 1 tripleHead2go
 2. Interactive Projection zone
 
    Participants interact with the A-life creatures in the projection zone through the use of Xbox Kinect 
+    - multiple screen display support (previous solution no longer necessary with Unity 5.3)
+    - Kinectv2 simple intergration
 3. Tangible Play Area 
 
-   Participants shape and form the virtual environment the creatures inhabit by moving physical objects that represent various structures in the environment.  
+   Participants shape and form the virtual environment the creatures inhabit by moving physical objects that represent various structures in the environment. 
+    - fiducial Recognition 
 
 ###To Do: 
 1. A-Life
