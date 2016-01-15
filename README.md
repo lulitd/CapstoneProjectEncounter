@@ -14,6 +14,8 @@ Hardware: Xbox Kinect V2, 2 projectors, web cam, 2 computers, 1 tripleHead2go
 
 ###Features: 
 1. A-Life
+   Synthetic creatures share the installation space with the participants as their habitat, they react to their fellow creatures behaviour, including human creatures.
+
 2. Interactive Projection zone
 
    Participants interact with the A-life creatures in the projection zone through the use of Xbox Kinect 
