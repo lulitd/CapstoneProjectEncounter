@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/addStructure.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Creature.cs">
     <Files>
-      <File FileName="Assets/Examples/03 - Advanced/PlayingTag/Behaviors/TagPlayerManager.cs" Line="83" Column="1" />
-      <File FileName="Assets/UnitySteer-development/Tools/DetectableObjectCreator.cs" Line="1" Column="1" />
-      <File FileName="Assets/UnitySteer-development/Behaviors/DetectableObject.cs" Line="7" Column="24" />
-      <File FileName="Assets/addStructure.cs" Line="55" Column="12" />
-      <File FileName="Assets/Scripts/OSCReceiver.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/OSCTestSender2.js" Line="1" Column="1" />
-      <File FileName="Assets/UnitySteer-development/Behaviors/Radar.cs" Line="36" Column="28" />
-      <File FileName="Assets/UnitySteer-development/Behaviors/AutonomousVehicle.cs" Line="1" Column="1" />
-      <File FileName="Assets/UnitySteer-development/Behaviors/SteerForNeighborGroup.cs" Line="57" Column="37" />
-      <File FileName="Assets/UnitySteer-development/Behaviors/SteerForPursuit.cs" Line="93" Column="24" />
+      <File FileName="Assets/UnitySteerExamples/03 - Advanced/PlayingTag/Behaviors/TagPlayerManager.cs" Line="89" Column="24" />
+      <File FileName="Assets/Scripts/CreatureManager.cs" Line="24" Column="25" />
+      <File FileName="Assets/UnitySteerExamples/03 - Advanced/PlayingTag/Behaviors/TagPlayer.cs" Line="146" Column="54" />
+      <File FileName="Assets/Scripts/Creature.cs" Line="158" Column="1" />
+      <File FileName="Assets/UnitySteer-development/Behaviors/SteerForSphericalObstacles.cs" Line="230" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -28,6 +28,7 @@ namespace UnitySteer.Behaviors
 
         [SerializeField] private DetectableObject _quarry;
 
+		private GameObject[] potential_quarry;
 
         [SerializeField] private float _maxPredictionTime = 5;
 
@@ -67,45 +68,43 @@ namespace UnitySteer.Behaviors
             }
         }
 
-		//---added by Rose---
-//		public bool setObjQuarry(DetectableObject obj){
-//			_quarry = obj;
-//		}
-		//-----end-----------
-
         #endregion
 
         protected override Vector3 CalculateForce()
         {
 			//---added by Rose---
+			potential_quarry = GameObject.FindGameObjectsWithTag("humanCreature");
 
-			/* this gives error: cannot find the instance
-			_quarry = GameObject.FindGameObjectWithTag("humanCreature").GetComponent<DetectableObject>();
-			*/
-			DetectableObject [] objs =(DetectableObject[])GameObject.FindObjectsOfType (typeof(DetectableObject));
+			GameObject nearest = null;
+			float nearest_dist = 100f;
 
-			foreach(DetectableObject o in objs){
-				if(o.CompareTag("humanCreature")){
-					Debug.Log ("found human creature");
-					_quarry = o;
-
-				}else{
-					Debug.Log ("NOOOOT found human creature");
+			foreach (GameObject q in potential_quarry){
+				float difference = Vector3.Distance(q.transform.position, transform.position);
+				if (difference < nearest_dist) {
+					nearest = q;
+					nearest_dist = difference;
 				}
 			}
-			Debug.Log ("here!!!" + _quarry.ToString());
-			//-----end-----------
 
+			if (nearest != null) {
+				_quarry = nearest.GetComponent<DetectableObject> ();
+			} else {
+				Debug.Log ("nearest human creature is null");
+			}
 
-            if (_quarry == null)
-            {
+//			_quarry = GameObject.FindGameObjectWithTag("humanCreature").GetComponent<DetectableObject>();
+
+			if (_quarry == null) {
 				//---added by Rose---
-				Debug.Log("QUARRY IS NULL");
+				Debug.Log ("QUARRY IS NULL");
 				//-----end-----------
 
 				enabled = false;
-                return Vector3.zero;
-            }
+				return Vector3.zero;
+			} else {
+				Debug.Log ("HUMAN CREATURE QUARRY FOUND: " + _quarry.gameObject.name);
+			}
+			//-----end-----------
 
             var force = Vector3.zero;
             var offset = _quarry.Position - Vehicle.Position;

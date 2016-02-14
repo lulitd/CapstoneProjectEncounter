@@ -52,22 +52,14 @@
      <Compile Include="Assets\3DflockScra\RandomWiggle.cs" />
      <Compile Include="Assets\3DflockScra\SteerBehaviour.cs" />
      <Compile Include="Assets\3DflockScra\SteerWiggler.cs" />
-     <Compile Include="Assets\Examples\01 - Basic\GoForPointController.cs" />
-     <Compile Include="Assets\Examples\01 - Basic\PathFollowingController.cs" />
-     <Compile Include="Assets\Examples\03 - Advanced\ObstacleAvoidance\DestroyOnCollision.cs" />
-     <Compile Include="Assets\Examples\03 - Advanced\ObstacleAvoidance\PrefabInstantiator.cs" />
-     <Compile Include="Assets\Examples\03 - Advanced\PlayingTag\Behaviors\TagPlayer.cs" />
-     <Compile Include="Assets\Examples\03 - Advanced\PlayingTag\Behaviors\TagPlayerManager.cs" />
-     <Compile Include="Assets\OSCHelper.cs" />
+     <Compile Include="Assets\Old Scripts\Chase.cs" />
+     <Compile Include="Assets\Old Scripts\CreatureMovementHandler.cs" />
+     <Compile Include="Assets\Old Scripts\FollowMouse.cs" />
+     <Compile Include="Assets\Old Scripts\GhostChase.cs" />
+     <Compile Include="Assets\Old Scripts\GhostStateMachine.cs" />
      <Compile Include="Assets\Prey.cs" />
-     <Compile Include="Assets\Scripts\AgentManager.cs" />
-     <Compile Include="Assets\Scripts\Chase.cs" />
-     <Compile Include="Assets\Scripts\CreatureMovementHandler.cs" />
-     <Compile Include="Assets\Scripts\FollowMouse.cs" />
-     <Compile Include="Assets\Scripts\GhostChase.cs" />
-     <Compile Include="Assets\Scripts\GhostStateMachine.cs" />
-     <Compile Include="Assets\Scripts\MoverHandler.cs" />
-     <Compile Include="Assets\Scripts\OSCTestSender.cs" />
+     <Compile Include="Assets\Scripts\Creature.cs" />
+     <Compile Include="Assets\Scripts\CreatureManager.cs" />
      <Compile Include="Assets\SpawnFood.cs" />
      <Compile Include="Assets\Steer2D\Examples\Assets\Target.cs" />
      <Compile Include="Assets\Steer2D\Scripts\Arrive.cs" />
@@ -79,12 +71,6 @@
      <Compile Include="Assets\Steer2D\Scripts\Seek.cs" />
      <Compile Include="Assets\Steer2D\Scripts\SteeringAgent.cs" />
      <Compile Include="Assets\Steer2D\Scripts\SteeringBehaviour.cs" />
-     <Compile Include="Assets\UnityOSC\OSC\OSCBundle.cs" />
-     <Compile Include="Assets\UnityOSC\OSC\OSCClient.cs" />
-     <Compile Include="Assets\UnityOSC\OSC\OSCMessage.cs" />
-     <Compile Include="Assets\UnityOSC\OSC\OSCPacket.cs" />
-     <Compile Include="Assets\UnityOSC\OSC\OSCServer.cs" />
-     <Compile Include="Assets\UnityOSC\OSCHandler.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\AngleCosineAttribute.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\RangeAttribute.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\Vector3ToggleAttribute.cs" />
@@ -125,6 +111,12 @@
      <Compile Include="Assets\UnitySteer-development\Tools\RandomizeStartPosition.cs" />
      <Compile Include="Assets\UnitySteer-development\Tools\Speedometer.cs" />
      <Compile Include="Assets\UnitySteer-development\Vector3Pathway.cs" />
+     <Compile Include="Assets\UnitySteerExamples\01 - Basic\GoForPointController.cs" />
+     <Compile Include="Assets\UnitySteerExamples\01 - Basic\PathFollowingController.cs" />
+     <Compile Include="Assets\UnitySteerExamples\03 - Advanced\ObstacleAvoidance\DestroyOnCollision.cs" />
+     <Compile Include="Assets\UnitySteerExamples\03 - Advanced\ObstacleAvoidance\PrefabInstantiator.cs" />
+     <Compile Include="Assets\UnitySteerExamples\03 - Advanced\PlayingTag\Behaviors\TagPlayer.cs" />
+     <Compile Include="Assets\UnitySteerExamples\03 - Advanced\PlayingTag\Behaviors\TagPlayerManager.cs" />
      <Compile Include="Assets\Utils\SingletonPerLevel.cs" />
      <Compile Include="Assets\Wander.cs" />
      <Compile Include="Assets\addStructure.cs" />
@@ -134,7 +126,7 @@
      <None Include="Assets\UnitySteer-development\License.txt" />
      <None Include="Assets\UnitySteer-development\TickedPriorityQueue\LICENSE.txt" />
      <None Include="Assets\Plugins\GoKit\easing\easeEquationsLicense.txt" />
-     <None Include="Assets\PBS Materials Variety Pack\readme.txt" />
+     <None Include="Assets\Materials\PBS Materials Variety Pack\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
