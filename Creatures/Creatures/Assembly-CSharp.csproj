@@ -45,32 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\3DflockCons\AttrPt3D.cs" />
-     <Compile Include="Assets\3DflockCons\Boid3D.cs" />
-     <Compile Include="Assets\3DflockCons\Flock3D.cs" />
-     <Compile Include="Assets\3DflockCons\FlockManager.cs" />
-     <Compile Include="Assets\3DflockScra\RandomWiggle.cs" />
-     <Compile Include="Assets\3DflockScra\SteerBehaviour.cs" />
-     <Compile Include="Assets\3DflockScra\SteerWiggler.cs" />
-     <Compile Include="Assets\Old Scripts\Chase.cs" />
-     <Compile Include="Assets\Old Scripts\CreatureMovementHandler.cs" />
-     <Compile Include="Assets\Old Scripts\FollowMouse.cs" />
-     <Compile Include="Assets\Old Scripts\GhostChase.cs" />
-     <Compile Include="Assets\Old Scripts\GhostStateMachine.cs" />
-     <Compile Include="Assets\Prey.cs" />
      <Compile Include="Assets\Scripts\Creature.cs" />
      <Compile Include="Assets\Scripts\CreatureManager.cs" />
-     <Compile Include="Assets\SpawnFood.cs" />
-     <Compile Include="Assets\Steer2D\Examples\Assets\Target.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Arrive.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Evade.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Flee.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Flock.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\FollowPath.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Pursue.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\Seek.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\SteeringAgent.cs" />
-     <Compile Include="Assets\Steer2D\Scripts\SteeringBehaviour.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\AngleCosineAttribute.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\RangeAttribute.cs" />
      <Compile Include="Assets\UnitySteer-development\Attributes\Vector3ToggleAttribute.cs" />
@@ -118,11 +94,6 @@
      <Compile Include="Assets\UnitySteerExamples\03 - Advanced\PlayingTag\Behaviors\TagPlayer.cs" />
      <Compile Include="Assets\UnitySteerExamples\03 - Advanced\PlayingTag\Behaviors\TagPlayerManager.cs" />
      <Compile Include="Assets\Utils\SingletonPerLevel.cs" />
-     <Compile Include="Assets\Wander.cs" />
-     <Compile Include="Assets\addStructure.cs" />
-     <Compile Include="Assets\boid\BoidManager.cs" />
-     <Compile Include="Assets\boid\Flock.cs" />
-     <Compile Include="Assets\demoManager.cs" />
      <None Include="Assets\UnitySteer-development\License.txt" />
      <None Include="Assets\UnitySteer-development\TickedPriorityQueue\LICENSE.txt" />
      <None Include="Assets\Plugins\GoKit\easing\easeEquationsLicense.txt" />

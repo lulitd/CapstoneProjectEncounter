@@ -88,6 +88,7 @@ public class Creature : MonoBehaviour {
 	private void checkState(){
 		if (_energyLevel <= 10.0f) { // death?
 			Debug.Log("energy level < 10");
+
 		} else if (_energyLevel > 10.0f && _energyLevel < 20.0f) { // prey
 			_state = CreatureState.Prey;
 		} else if (_energyLevel >= 20.0f && _energyLevel < 30.0f) { // pursuer
@@ -143,6 +144,7 @@ public class Creature : MonoBehaviour {
 		checkState ();
 		if (State == CreatureState.Prey)
 		{
+			_energyLevel -= 0.7f;
 			var closest =
 				CreatureManager.Instance.Creatures.Where(x => x != this)
 					.OrderBy(x => (x.Vehicle.Position - Vehicle.Position).sqrMagnitude)
