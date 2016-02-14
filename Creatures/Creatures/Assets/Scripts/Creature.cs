@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
-using UnityEngine;
 using UnitySteer.Behaviors;
 
 [RequireComponent(typeof (AutonomousVehicle))]
@@ -87,14 +86,17 @@ public class Creature : MonoBehaviour {
 	// check energy state to determine state
 	private void checkState(){
 		if (_energyLevel <= 10.0f) { // death?
-			Debug.Log("energy level < 10");
+		//	Debug.Log("energy level < 10");
 
 		} else if (_energyLevel > 10.0f && _energyLevel < 20.0f) { // prey
-			_state = CreatureState.Prey;
+			// _state = CreatureState.Prey;
+			SetState (CreatureState.Prey);
 		} else if (_energyLevel >= 20.0f && _energyLevel < 30.0f) { // pursuer
-			_state = CreatureState.Pursuer;
-		} else if (_energyLevel > 30.0f && _energyLevel < 100.0f) { // neutral
-			_state = CreatureState.Neutral;
+			// _state = CreatureState.Pursuer;
+			SetState (CreatureState.Pursuer);
+		} else if (_energyLevel > 30.0f && _energyLevel <= 100.0f) { // neutral
+			// _state = CreatureState.Neutral;
+			SetState (CreatureState.Neutral);
 		}
 	}
 
@@ -106,6 +108,7 @@ public class Creature : MonoBehaviour {
 		case CreatureState.Neutral:
 			_renderer.material = _baseMaterial;
 			_renderer.material.color = Color.white;
+
 			break;
 		case CreatureState.Prey:
 			Vehicle.MaxSpeed *= 1.75f;
@@ -142,9 +145,12 @@ public class Creature : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		checkState ();
-		if (State == CreatureState.Prey)
-		{
+
+		if (State == CreatureState.Prey){
+			Debug.Log ("I am prey");
 			_energyLevel -= 0.7f;
+
+			// Every frame, try to avoid the nearest attacker if we're the prey.
 			var closest =
 				CreatureManager.Instance.Creatures.Where(x => x != this)
 					.OrderBy(x => (x.Vehicle.Position - Vehicle.Position).sqrMagnitude)
@@ -153,11 +159,13 @@ public class Creature : MonoBehaviour {
 
 		}else if (State == CreatureState.Neutral){
 			_energyLevel -= 0.5f;
-
+			// Debug.Log ("creature is neutral!!!!");
+			Debug.Log ("Neutural: colour now: "+ _renderer.material.color.ToString());
+			Debug.Log ("creature update: energyLevel: " + _energyLevel);
 
 		}else if (State == CreatureState.Pursuer){
+			Debug.Log ("I am pursuer");
 			_energyLevel -= 1.0f;
-			Debug.Log ("creature update: energyLevel: " + _energyLevel);
 		}
 	}
 
